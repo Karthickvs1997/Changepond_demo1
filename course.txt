@@ -7,3 +7,5 @@ C#
 html & css
 azuze
 mysql
+auze
+msql
