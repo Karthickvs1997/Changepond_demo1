@@ -1,0 +1,7 @@
+Java
+Sql
+Python
+C
+C#
+.net
+html & css
