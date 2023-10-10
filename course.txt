@@ -5,3 +5,5 @@ C
 C#
 .net
 html & css
+azuze
+mysql
