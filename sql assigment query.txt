@@ -1,0 +1,39 @@
+Solve the queries and put the select statements in a notepad file and upload
+
+1.      List full details of all hotels.
+2.      List full details of all hotels in New York.
+3.      List the names and cities of all guests, ordered according to their cities.
+4.      List all details for non-smoking rooms in ascending order of price.
+5.      List the number of hotels there are.
+6.      List the cities in which guests live. Each city should be listed only once.
+7.      List the average price of a room.
+8.      List hotel names, their room numbers, and the type of that room.
+9.      List the hotel names, booking dates, and room numbers for all hotels in New York.
+10.  What is the number of bookings that started in the month of September?
+11.  List the names and cities of guests who began a stay in New York in August.
+12.  List the hotel names and room numbers of any hotel rooms that have not been booked.
+13.  List the hotel name and city of the hotel with the highest priced room.
+14.  List hotel names, room numbers, cities, and prices for hotels that have rooms with prices lower than the lowest priced room in a Boston hotel.
+15.  List the average price of a room grouped by city.
+
+1. select * from hotel_table;
+
+2.select * from hotel_table where city = 'New York';
+
+3.select name ,city from guest_table  order by city;
+
+4.select price, type from room_table where type="n" order by price;
+
+5.select count(*) from hotel_table; and select count(hotel_no) as hotel from hotel_table;
+
+6.
+
+7.select avg(price) from room_table;
+
+8.select name, room_no, type from hotel_table inner join room_table on hotel_table.hotel_no = room_table.hotel_no;
+
+9.select name,date_from,room_no from hotel_table inner join booking_table on hotel_table.hotel_no=booking_table.hotel_no where city="new york";
+
+10.select count(*) from booking_table where date_from >= "1999-09-01";
+
+11.select name,city from guest_table inner join booking_table on guest_table.guest_no = booking_table.guest_no where date_from = "1999-08-01";
